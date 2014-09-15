@@ -15,7 +15,8 @@ namespace EliteMarketScraper
 
         public void Run(EasyHook.RemoteHooking.IContext InContext)
         {
-            MarketHook hook = new MarketHook();
+            MarketHook marketHook = new MarketHook();
+            LocationHook locationHook = new LocationHook();
             RemoteHooking.WakeUpProcess();
 
             while (true)
