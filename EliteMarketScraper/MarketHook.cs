@@ -21,11 +21,10 @@ namespace EliteMarketScraper
 
         public MarketHook()
         {
-            Debugger.Launch();
-            var mainAddress = Utility.GetModuleHandle("EliteDangerous.exe");
+            var mainAddress = Utility.GetModuleHandle("EliteDangerous.exe"); 
             var imageBase = 4194304;
 
-            var marketAddress = IntPtr.Subtract(mainAddress, imageBase) + 0xBE2190;
+            var marketAddress = IntPtr.Subtract(mainAddress, imageBase) + 0xBE2260;
             _marketOriginal = (MarketDelegate)Marshal.GetDelegateForFunctionPointer(marketAddress, typeof(MarketDelegate));
 
 

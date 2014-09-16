@@ -22,11 +22,10 @@ namespace EliteMarketScraper
 
         public LocationHook()
         {
-            Debugger.Launch();
             var mainAddress = Utility.GetModuleHandle("EliteDangerous.exe");
-            var imageBase = 4194304;
+            var imageBase = 4194304; 
 
-            var locationAddress = IntPtr.Subtract(mainAddress, imageBase) + 0xBC3670;
+            var locationAddress = IntPtr.Subtract(mainAddress, imageBase) + 0xBC3850;
             _locationOriginal = (LocationDelegate)Marshal.GetDelegateForFunctionPointer(locationAddress, typeof(LocationDelegate));
 
 
