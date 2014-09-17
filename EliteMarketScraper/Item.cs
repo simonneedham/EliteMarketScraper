@@ -45,7 +45,7 @@ namespace EliteMarketScraper
         {
             try
             {
-                System.IO.File.AppendAllText("C:\\dump\\dump.txt", this.ItemDatabaseId + ";" + this.BuyPrice + ";" + this.SellPrice + ";" + this.Demand + ";" + this.DemandLevel + ";" + this.CargoStock + ";" + this.CargoItemBoughtFor + ";" + this.StationStock + ";" + this.StationStockLevel + ";" + this.CategoryName + ";" + this.ItemName + ";" + this.ItemInfo + ";" + this.GalacticAverage + (this.Location != null ? ";" + this.Location.SystemName + ";" + this.Location.LocationName : "") + Environment.NewLine);
+                System.IO.File.AppendAllText(@"c:\dump.txt", this.ItemDatabaseId + ";" + this.BuyPrice + ";" + this.SellPrice + ";" + this.Demand + ";" + this.DemandLevel + ";" + this.CargoStock + ";" + this.CargoItemBoughtFor + ";" + this.StationStock + ";" + this.StationStockLevel + ";" + this.CategoryName + ";" + this.ItemName + ";" + this.ItemInfo + ";" + this.GalacticAverage + (this.Location != null ? ";" + this.Location.SystemName + ";" + this.Location.LocationName : "") + Environment.NewLine);
             }
             catch(Exception)
             {
